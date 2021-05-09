@@ -5,28 +5,37 @@
 本项目用于江苏科技大学健康打卡，此项目为基于[健康打卡_江苏科技大学版](https://github.com/yin1999/justhealthreport)的函数计算版本。
 
 当前仅适用于[阿里云函数计算](https://fc.console.aliyun.com/)，若使用腾讯云的相关产品，请自行修改代码
-
 ## 编译教程
 
-若想要直接使用，请转至[下载发行版](#下载发行版)
+若想要直接使用，请转至[使用说明](#使用说明)
 
-1. 环境配置，以CentOS 7为例
+1. 环境配置，以`CentOS`/`Debian`为例
 
-    安装软件：Golang[>= 1.16]、git、make、zip
+    - 安装Golang[>= 1.16]: [golang.google.cn/doc/install](https://golang.google.cn/doc/install)
 
-       yum install -y golang git make zip
+    - 安装git、make、zip
+
+       ```bash
+       # Centos
+       sudo yum install git make zip
+
+       # Debian/Ubuntu
+       sudo apt install git make zip
+       ```
 
 2. 通过源码下载、编译
 
-       go env -w GOPROXY=https://mirrors.aliyun.com/goproxy/,direct  #配置Goproxy
+    ```bash
+    # 配置Goproxy
+    go env -w GOPROXY=https://mirrors.aliyun.com/goproxy/,direct
 
-       #下载
-       git clone https://github.com/yin1999/justhealthreport_fc.git
-       cd justhealthreport_fc
-
-3. 编译
-
-       make # 生成二进制文件bootstrap.zip
+    # 下载源码
+    git clone https://github.com/yin1999/justhealthreport_fc.git
+    cd justhealthreport_fc
+    
+    # 编译
+    make # 生成二进制文件bootstrap.zip
+    ```
 
 ## 使用说明
 
