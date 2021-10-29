@@ -2,4 +2,4 @@ module main
 
 go 1.16
 
-require github.com/yin1999/justhealthreport v0.1.2
+require github.com/yin1999/justhealthreport v0.1.3
